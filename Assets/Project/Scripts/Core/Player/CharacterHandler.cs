@@ -1,7 +1,9 @@
-﻿public class CharacterHandler : IExchange
+﻿using ProductProduce;
+public class CharacterHandler : IExchange
 {
     private Inventory _inventory;
-    private IItem _temp;
+    private UIInventory _ui;
+    private Slot _temp;
 
     public void Initialize(ConfigInventory config, Сollector сollector)
     {
@@ -9,31 +11,40 @@
         сollector.Initialie(this);
     }
 
-    
+    public void ForUI(UIInventory uI)
+    {
+        _ui = uI;
+    }
     public IItem TryGetItem()
     {
-        return _inventory.TryTakeItem(_temp);
+        var item = _temp.TakeItem();
+        _ui.RefreshUI(_temp);
+        return item;
     }
     public void TryGiveItem(IItem item)
     {
-        var slot = _inventory._slots.Find(s => s.ItemType == item.Type);
-        slot.Additem(item);
+        _temp.Additem(item);
+        _ui.RefreshUI(_temp);
     }
-    public bool TryAdd(IItem item)
+    public bool TryAdd(ItemsType item)
     {
-        UnityEngine.Debug.Log(item);
-        var slot = _inventory._slots.Find(s => s.ItemType == item.Type);
-        if (!slot.IsFull)
-            _temp = slot.Item;
-
-        return false;
+        var slot = _inventory.Slots.Find(s => s.Type == item || s.IsSlotEmpty);
+        if (slot.IsFull)
+        {
+            return false;
+        }
+        _temp = slot;
+        _temp.SetItem(item);
+        return true;
     }
-    public bool TryTake(IItem item)
+    public bool TryTake(ItemsType item)
     {
-        var slot = _inventory._slots.Find(s => s.ItemType == item.Type);
-        if (!slot.IsEmpty)
-            _temp = slot.Item;
-
+        var slot = _inventory.Slots.Find(s => s.Type == item && !s.IsEmpty);
+        if (slot != null)
+        {
+            _temp = slot;
+            return true;
+        }
         return false;
     }
 }

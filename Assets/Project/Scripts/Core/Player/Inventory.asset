@@ -12,6 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: caf2954c68886b444b96e78135b704e2, type: 3}
   m_Name: Inventory
   m_EditorClassIdentifier: 
-  _black: {fileID: 6163421478927286853, guid: c8027a5194363284597bdec2cb325ac2, type: 3}
-  _red: {fileID: 5019213591074215602, guid: 3cbe8de991f30764ba1d32c4f1a7f7be, type: 3}
-  _green: {fileID: 5623230091256530859, guid: b6d3a2dc9810e6a459c348672103b919, type: 3}
+  _capacitySlot: 10
