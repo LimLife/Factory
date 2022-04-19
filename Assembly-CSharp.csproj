@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{3F8E9321-9BE8-FD9B-0B1A-7725E7DDF127}</ProjectGuid>
+    <ProjectGuid>{C96D03C4-7AE9-A97C-3030-BD636564F763}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -64,37 +64,61 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Joystick Pack\Examples\JoystickPlayerExample.cs" />
-    <Compile Include="Assets\Joystick Pack\Examples\JoystickSetterExample.cs" />
-    <Compile Include="Assets\Joystick Pack\Scripts\Base\Joystick.cs" />
-    <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\DynamicJoystick.cs" />
-    <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\FixedJoystick.cs" />
-    <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\FloatingJoystick.cs" />
-    <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\VariableJoystick.cs" />
-    <Compile Include="Assets\Project\Scripts\Core\CreatedEntity.cs" />
-    <Compile Include="Assets\Project\Scripts\Core\Game.cs" />
-    <Compile Include="Assets\Project\Scripts\Core\Item\BlackItem.cs" />
-    <Compile Include="Assets\Project\Scripts\Core\Item\EmptyItem.cs" />
-    <Compile Include="Assets\Project\Scripts\Core\Item\GreenItem.cs" />
-    <Compile Include="Assets\Project\Scripts\Core\Item\Item.cs" />
-    <Compile Include="Assets\Project\Scripts\Core\Item\ItemType.cs" />
-    <Compile Include="Assets\Project\Scripts\Core\Item\RedItem.cs" />
-    <Compile Include="Assets\Project\Scripts\Core\Player\Player.cs" />
-    <Compile Include="Assets\Project\Scripts\Core\Player\Сollector.cs" />
-    <Compile Include="Assets\Project\Scripts\Core\Storage\FinishedStorage.cs" />
-    <Compile Include="Assets\Project\Scripts\Core\Storage\Storage.cs" />
-    <Compile Include="Assets\Project\Scripts\Core\Storage\StorageResourses.cs" />
-    <Compile Include="Assets\Project\Scripts\Core\Storage\TypeFabric.cs" />
-    <Compile Include="Assets\Project\Scripts\Core\Structure\ProduceBlack.cs" />
-    <Compile Include="Assets\Project\Scripts\Core\Structure\ProduceGreen.cs" />
-    <Compile Include="Assets\Project\Scripts\Core\Structure\ProduceRed.cs" />
-    <Compile Include="Assets\Project\Scripts\Core\Structure\Structure.cs" />
-    <Compile Include="Assets\Project\Scripts\Core\Visit\Visit.cs" />
+    <Compile Include="Assets\Project\Scripts\Core\IExchange.cs" />
+    <Compile Include="Assets\Project\Scripts\Core\Inventory\Inventory.cs" />
+    <Compile Include="Assets\Project\Scripts\Core\Inventory\Slot.cs" />
+    <Compile Include="Assets\Project\Scripts\Core\Inventory\UIInventory\UIInventory.cs" />
+    <Compile Include="Assets\Project\Scripts\Core\Player\CharacterHandler.cs" />
+    <Compile Include="Assets\Project\Scripts\Core\Player\Config\ConfigInventory.cs" />
+    <Compile Include="Assets\Project\Scripts\Core\Player\Config\ConfigPlayer.cs" />
+    <Compile Include="Assets\Project\Scripts\Core\Player\MBReference\Player.cs" />
+    <Compile Include="Assets\Project\Scripts\Core\Player\MBReference\Сollector.cs" />
+    <Compile Include="Assets\Project\Scripts\Core\Player\PlayerInput.cs" />
+    <Compile Include="Assets\Project\Scripts\Core\Player\PlayerPacage.cs" />
+    <Compile Include="Assets\Project\Scripts\Core\Structurs\Factory\BalckFactory\BlackStorageFinifshProduct.cs" />
+    <Compile Include="Assets\Project\Scripts\Core\Structurs\Factory\BalckFactory\MonoBehFactory\BlackFactory.cs" />
+    <Compile Include="Assets\Project\Scripts\Core\Structurs\Factory\BalckFactory\PackAge.cs" />
+    <Compile Include="Assets\Project\Scripts\Core\Structurs\Factory\BalckFactory\ProduceBlack.cs" />
+    <Compile Include="Assets\Project\Scripts\Core\Structurs\Factory\BalckFactory\RefeneseFabric.cs" />
+    <Compile Include="Assets\Project\Scripts\Core\Structurs\Factory\Config\ConfigFabric.cs" />
+    <Compile Include="Assets\Project\Scripts\Core\Structurs\Factory\Config\ConfigStorage.cs" />
+    <Compile Include="Assets\Project\Scripts\Core\Structurs\Factory\Factory.cs" />
+    <Compile Include="Assets\Project\Scripts\Core\Structurs\Factory\GreenFactory\GreenFabricData.cs" />
+    <Compile Include="Assets\Project\Scripts\Core\Structurs\Factory\GreenFactory\GreenPackage.cs" />
+    <Compile Include="Assets\Project\Scripts\Core\Structurs\Factory\GreenFactory\GreenStorage.cs" />
+    <Compile Include="Assets\Project\Scripts\Core\Structurs\Factory\GreenFactory\GreenStorageFinishProduct.cs" />
+    <Compile Include="Assets\Project\Scripts\Core\Structurs\Factory\GreenFactory\MonoBehFactory\GreenFactory.cs" />
+    <Compile Include="Assets\Project\Scripts\Core\Structurs\Factory\GreenFactory\ProduceGreen.cs" />
+    <Compile Include="Assets\Project\Scripts\Core\Structurs\Factory\GreenFactory\ReferenceGreenFabric.cs" />
+    <Compile Include="Assets\Project\Scripts\Core\Structurs\Factory\IInitFabric.cs" />
+    <Compile Include="Assets\Project\Scripts\Core\Structurs\Factory\IInitialize.cs" />
+    <Compile Include="Assets\Project\Scripts\Core\Structurs\Factory\IStructure.cs" />
+    <Compile Include="Assets\Project\Scripts\Core\Structurs\Factory\MonoBehStorage\MonoBehStorage.cs" />
+    <Compile Include="Assets\Project\Scripts\Core\Structurs\Factory\MonoBehStorage\StorageProduct.cs" />
+    <Compile Include="Assets\Project\Scripts\Core\Structurs\Factory\MonoBehStorage\StorageResourses.cs" />
+    <Compile Include="Assets\Project\Scripts\Core\Structurs\Factory\RedFactory\MonoBehFactory\RedFactory.cs" />
+    <Compile Include="Assets\Project\Scripts\Core\Structurs\Factory\RedFactory\ProduceRed.cs" />
+    <Compile Include="Assets\Project\Scripts\Core\Structurs\Factory\RedFactory\RedFabricData.cs" />
+    <Compile Include="Assets\Project\Scripts\Core\Structurs\Factory\RedFactory\RedPackage.cs" />
+    <Compile Include="Assets\Project\Scripts\Core\Structurs\Factory\RedFactory\RedStorage.cs" />
+    <Compile Include="Assets\Project\Scripts\Core\Structurs\Factory\RedFactory\RedStorageFinishProduct.cs" />
+    <Compile Include="Assets\Project\Scripts\Core\Structurs\Factory\RedFactory\RefereneseRedFabric.cs" />
+    <Compile Include="Assets\Project\Scripts\Core\Structurs\Factory\Resorses.cs" />
+    <Compile Include="Assets\Project\Scripts\Core\Structurs\Factory\Resousres\BlackItem.cs" />
+    <Compile Include="Assets\Project\Scripts\Core\Structurs\Factory\Resousres\BlackProduct.cs" />
+    <Compile Include="Assets\Project\Scripts\Core\Structurs\Factory\Resousres\EmptyItem.cs" />
+    <Compile Include="Assets\Project\Scripts\Core\Structurs\Factory\Resousres\GreenItem.cs" />
+    <Compile Include="Assets\Project\Scripts\Core\Structurs\Factory\Resousres\GreenProduct.cs" />
+    <Compile Include="Assets\Project\Scripts\Core\Structurs\Factory\Resousres\IItem.cs" />
+    <Compile Include="Assets\Project\Scripts\Core\Structurs\Factory\Resousres\ItemsType.cs" />
+    <Compile Include="Assets\Project\Scripts\Core\Structurs\Factory\Resousres\RedItem.cs" />
+    <Compile Include="Assets\Project\Scripts\Core\Structurs\Factory\Resousres\RedProduct.cs" />
+    <Compile Include="Assets\Project\Scripts\Core\Structurs\Factory\Storage\StorageData\StorageFinishProduct.cs" />
+    <Compile Include="Assets\Project\Scripts\Core\Structurs\Factory\Storage\StorageData\StorageResuorses.cs" />
+    <Compile Include="Assets\Project\Scripts\Core\SystemsType\ISystemEvent.cs" />
+    <Compile Include="Assets\Project\Scripts\Core\SystemsType\ISystemInit.cs" />
+    <Compile Include="Assets\Project\Scripts\Core\SystemsType\ISystemUpDate.cs" />
     <Compile Include="Assets\Project\Scripts\EntryPoint\Entry.cs" />
-    <Compile Include="Assets\Project\Scripts\InputSystem\CharacterInput.cs" />
-    <Compile Include="Assets\Project\Scripts\InterfaceSetting\IInitialize.cs" />
-    <Compile Include="Assets\Project\Scripts\Setting\FollowCamera.cs" />
-    <Compile Include="Assets\Project\Scripts\UI\UI.cs" />
     <Reference Include="UnityEngine">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.21f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
@@ -624,31 +648,31 @@
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.21f1/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Xml.Serialization.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline.Editor">
-      <HintPath>F:/UnityProject/2022/January/TaskToWorkStart 29.0.2022/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+      <HintPath>F:/GitClone/Fabric/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VSCode.Editor">
-      <HintPath>F:/UnityProject/2022/January/TaskToWorkStart 29.0.2022/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+      <HintPath>F:/GitClone/Fabric/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>F:/UnityProject/2022/January/TaskToWorkStart 29.0.2022/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>F:/GitClone/Fabric/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>F:/UnityProject/2022/January/TaskToWorkStart 29.0.2022/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+      <HintPath>F:/GitClone/Fabric/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
-      <HintPath>F:/UnityProject/2022/January/TaskToWorkStart 29.0.2022/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+      <HintPath>F:/GitClone/Fabric/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>F:/UnityProject/2022/January/TaskToWorkStart 29.0.2022/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+      <HintPath>F:/GitClone/Fabric/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Rider.Editor">
-      <HintPath>F:/UnityProject/2022/January/TaskToWorkStart 29.0.2022/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+      <HintPath>F:/GitClone/Fabric/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>F:/UnityProject/2022/January/TaskToWorkStart 29.0.2022/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>F:/GitClone/Fabric/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
-      <HintPath>F:/UnityProject/2022/January/TaskToWorkStart 29.0.2022/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+      <HintPath>F:/GitClone/Fabric/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup></ItemGroup>
